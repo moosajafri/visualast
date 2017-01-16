@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 
+
 Route::get('/dashboardsecond', function () {
     return view('mycustomfile');
 });
@@ -25,3 +26,7 @@ Route::get('/dashboardsecond', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::post('DAL/insertProfileSummary', 'DAL@insertProfileSummary');
+Route::get('DAL/insertProfileSummary', 'DAL@insertProfileSummary');
+Route::get('DAL/getProfileSummary', 'DAL@getProfileSummary');
